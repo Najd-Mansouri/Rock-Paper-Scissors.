@@ -1,11 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rock Paper Scissors</title>
+  <style>
+    :root {
+      --primary: hsl(240, 73%, 61%);
+      --radius: 25px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2rem;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+    }
+
+    #score {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      border: 2px solid var(--primary);
+      padding: 1rem 2rem;
+      border-radius: var(--radius);
+      background-color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: var(--primary);
+      color: white;
+    }
+
+    #wrapper {
+      display: flex;
+      gap: 1rem;
+    }
+
+    #res {
+      font-size: 1.1rem;
+      color: var(--primary);
+      padding: 1rem;
+      border: 2px dashed var(--primary);
+      border-radius: var(--radius);
+      width: 300px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-    <script src="script.js"></script>
+  <h1>Rock Paper Scissors</h1>
+
+  <div id="score">
+    <span id="humanScore">You: 0</span> |
+    <span id="computerScore">Computer: 0</span>
+  </div>
+
+  <div id="wrapper">
+    <button id="rock">Rock 🪨</button>
+    <button id="paper">Paper 📃</button>
+    <button id="scissors">Scissors ✂️</button>
+  </div>
+
+  <div id="res">Make your move!</div>
+
+  <script src="script.js"></script>
 </body>
 </html>
